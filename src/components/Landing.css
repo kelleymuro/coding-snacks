@@ -1,0 +1,17 @@
+.landing-container {
+   display: flex;
+   align-items: baseline;
+   margin: 0 150px;
+   padding-top: 45px;
+   color: #ffffff;
+}
+
+.landing-header-text {
+   font-size: 100px;
+   margin-right: 50px;
+}
+
+.landing-paragraph-text {
+   font-size: 22px;
+   line-height: 32px;
+}

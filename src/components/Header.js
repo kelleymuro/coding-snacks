@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Landing from './Landing';
+
 import HeaderCSS from './Header.css';
 
 const Header = () => {
@@ -13,6 +15,7 @@ const Header = () => {
                <Link to="/" className="navi-item"> Workflow </Link>          
                <Link to="/" className="cta"> Subscribe </Link>                  
          </nav>
+         <Landing/>
       </div>
    );
 }
