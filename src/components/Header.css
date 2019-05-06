@@ -1,0 +1,54 @@
+* {
+   margin: 0;
+   padding: 0;
+   }
+
+.hero {
+   background-color: #040638;
+   background-image: url(https://miro.com/static/images/page/mr-index/home-large-path.png?cbh=9df5d35e92af5e5b361be0a42df2c618);
+   background-repeat: no-repeat;
+   height: 100vh;
+}
+
+.navi-container {
+   display: flex;
+   align-items: center;
+   margin: 0 150px;
+   height: 120px;
+   border-bottom: solid 2px #fff;
+  
+}
+
+.logo {
+   font-size: 80px;
+   text-decoration: none;
+   padding-right: 80px;
+}
+
+.cta {
+   position: absolute;
+   left: 85%;
+   top: auto;
+   margin: 0;
+   color: #fff;
+   font-size: 22px;
+   text-decoration: none;
+   background-color: #ff6575;
+   border-radius: 10px;
+   padding: 10px 20px;
+}
+
+.cta:hover {
+   background-color: #eb5d6b;
+}
+
+.navi-item {
+   color: #ffffff;
+   font-size: 22px;
+   margin-right: 20px;
+   text-decoration: none;
+}
+
+.navi-item:hover {
+   color: #ff6575;
+}
