@@ -5,6 +5,7 @@ import homeCSS from './Home.css';
 import Wave from '../components/Wave';
 import CardSection from '../components/CardSection';
 import FeaturedSection from '../components/FeaturedSection';
+import FeaturedList from '../components/FeaturedList';
 
 class Home extends React.Component  {
    render() {
@@ -52,10 +53,10 @@ class Home extends React.Component  {
       This is something that will help you understand how to quickly use CSS in your project.
       Not even a problem. You guys are doing awesome!"
       />
+      <FeaturedList/>
   </div>
      );
-   }
-     
+   }   
 }
 
 export default Home;
