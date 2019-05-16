@@ -11,14 +11,17 @@ class FeaturedList extends React.Component {
       client.getEntries({
           'content_type' : 'about'
         }).then( (entries) => {
-          this.setState({aboutpage: entries.items[0]}) 
+          this.setState({aboutpage: entries.items[0, 1]}) 
         })
   }
+
+  
 
    render() {
       return(
          <div className="container">
-         {this.state.aboutpage.fields.length === 0 ? <div> Loading </div> : <p>{this.state.aboutpage.fields.aboutDescription}</p> 
+         {this.state.aboutpage.length === 0 ? <div> </div> : <p>{this.state.aboutpage.fields.aboutDescription}</p>  
+         
       
          }
 
