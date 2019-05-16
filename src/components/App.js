@@ -3,15 +3,14 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 import Header from './Header';
 import history from '../history';
+import Home from '../pages/Home';
 
 const App = () => {
    return(
       <Router history={history} >
       <div>
          <Header />
-         <Switch>
-         <Route path="/"></Route>
-         </Switch>
+         <Route exact path="/" component={Home}></Route>
       </div>
       </Router>
    );

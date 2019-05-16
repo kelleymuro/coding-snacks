@@ -1,56 +1,76 @@
-* {
-   margin: 0;
-   padding: 0;
-   }
-
-.hero {
-   background-color: #040638;
-   background-image: url(https://miro.com/static/images/page/mr-index/home-large-path.png?cbh=9df5d35e92af5e5b361be0a42df2c618);
-   background-repeat: no-repeat;
-   height: 100vh;
+.Header {
+   position: fixed;
+   width: 100%;
+   padding: 50px 0;
+   z-index: 100;
+   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)
 }
 
-.navi-container {
-   display: flex;
+.HeaderScrolled {
+   background: rgba(0, 0, 0, 0.8);
+   padding: 15px 0;
+   backdrop-filter: blur(20px);
+}
+
+.HeaderGroup {
+   max-width: 800px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(5, auto);
    align-items: center;
-   margin: 0 150px;
-   padding-top: 5px;
-   padding-bottom: 10px;
-   height: 120px;
-   border-bottom: solid 2px #fff;
-  
+   justify-items: center;
 }
 
-.logo {
-   font-size: 80px;
-   text-decoration: none;
-   padding-right: 80px;
+.Header a {
+   color: #ffffff;
+   font-weight: 700;
+}
+
+.Header button {
+   padding: 8px 20px;
+   font-size: 20px;
+   background: #56ccf2;
+   border: none;
+   font-weight: 700;
+   border-radius: 10px;
+   outline: none;
+   cursor: pointer;
+   transition: .5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Header button:hover {
+   background: white;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+   transform: translateY(-3px);
 }
 
 .cta {
-   position: absolute;
-   left: 85%;
-   top: auto;
-   margin: 0;
+   font-size: 17px;
+   font-weight: 600;
    color: #fff;
-   font-size: 22px;
-   text-decoration: none;
-   background-color: #ff6575;
-   border-radius: 10px;
-   padding: 10px 20px;
-}
+   text-transform: uppercase;
+   background: #000000;
+   padding: 15px 20px;
+   border-radius: 20px;
+   transition: 0.8s cubic-bezier(0.2, 0.82, 0.2, 1);
+ }
+ 
+ .cta:hover {
+   background: #ffffff;
+   color: #000000;
+   
+ }
 
-.cta:hover {
-   background-color: #eb5d6b;
-}
+@media (max-width: 640px) {
+   .Header {
+       padding: 15px 0;
+   }
 
-.navi-item {
-   color: #ffffff;
-   font-size: 22px;
-   margin-right: 20px;
-   text-decoration: none;
-}
+   .HeaderGroup {
+       grid-template-columns: repeat(4, auto);
+   }
 
-.navi-item:hover {
-   color: #ff6575;
+   .Header a:nth-child(4) {
+       display: none;
+   }
 }

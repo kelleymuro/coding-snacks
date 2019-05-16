@@ -5,19 +5,44 @@ import Landing from './Landing';
 
 import HeaderCSS from './Header.css';
 
-const Header = () => {
-   return (
-      <div className="hero">
-         <nav className="navi-container">
-               <Link to="/" className="logo"> 🐮 </Link> 
-               <Link to="/" className="navi-item"> React </Link> 
-               <Link to="/" className="navi-item"> CSS </Link> 
-               <Link to="/" className="navi-item"> Workflow </Link>          
-               <Link to="/" className="cta"> Subscribe </Link>                  
-         </nav>
-         <Landing/>
+
+
+class Header extends React.Component {
+   constructor(props) {
+      super(props)
+
+      this.state = {
+         hasScrolled: false
+      }
+   }
+
+   componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll)
+   }
+
+   handleScroll = event => {
+      const scrollTop = window.pageYOffset
+
+      if (scrollTop > 40) {
+         this.setState({hasScrolled: true})
+      } else {
+         this.setState({hasScrolled: false})
+      }
+   }
+
+   render() {
+      return (
+         <div className={this.state.hasScrolled ? 'Header HeaderScrolled': 'Header'}>
+        <div className="HeaderGroup">
+          <Link to="/"><img src={require('../images/_logo-react.png')} width="30" alt="logo" /> </Link>
+          <Link to="/courses">Courses</Link>
+          <Link to="/downloads">Downloads</Link>
+          <Link to="/workshops">Workshops</Link>
+          {/* <Link to="/buy"><button>Buy</button></Link> */}
+        </div>
       </div>
-   );
+      )
+   }
 }
 
 export default Header;
