@@ -13,7 +13,7 @@ class Home extends React.Component  {
       <div className="Hero">
         <div className="HeroGroup">
           <h1>
-            Kayvon Rules <br /> and I wish he was always here.
+            Learn to code <br /> actionable elements for your projects
           </h1>
           <p className="hero-valueProp">
             FREE tutorials that teach you things you will actually use in your
