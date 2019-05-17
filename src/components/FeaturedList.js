@@ -11,7 +11,7 @@ class FeaturedList extends React.Component {
       client.getEntries({
           'content_type' : 'about'
         }).then( (entries) => {
-          this.setState({aboutpage: entries.items[0, 1]}) 
+          this.setState({aboutpage: entries.items[0]}) 
         })
   }
 
